@@ -1,0 +1,200 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Offer Banner */
+  .offer {
+    text-align: center;
+    background-color: #cf9292;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-bottom: 1px solid #ccc;
+    background-color: white;
+    flex-wrap: wrap;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: center;
+    flex: 1;
+  }
+  
+  /* Navigation Links */
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  .link {
+    position: relative;
+    color: black;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', sans-serif;
+    transition: color 0.3s ease;
+  }
+  
+  .link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(224, 210, 9);
+    transition: width 0.3s ease;
+  }
+  
+  .link:hover {
+    color: rgb(74, 73, 73);
+  }
+  
+  .link:hover::after {
+    width: 100%;
+  }
+
+  /* Style for arrow symbol */
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate arrow on hover */
+.dropdown:hover .arrow {
+  transform: rotate(180deg); /* Makes ▾ become ▴ */
+}
+
+  
+  /* Logout Button */
+  .logoutbtn {
+    padding: 8px 16px;
+    background-color: #e63946;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .logoutbtn:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+  }
+  
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0.5rem 0;
+    min-width: 150px;
+    z-index: 100;
+  }
+  
+  .dropdown-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: black;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  .dropdown-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Responsive Media Queries */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+  
+    .navLinks {
+      flex-direction: column;
+      width: 100%;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  
+    .logo {
+      text-align: left;
+      margin-bottom: 10px;
+      flex: none;
+    }
+  
+    .logoutbtn {
+      align-self: flex-start;
+    }
+  
+    .dropdown-menu {
+      position: relative;
+      box-shadow: none;
+      padding-left: 1rem;
+    }
+  
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .offer {
+      font-size: 14px;
+      padding: 8px 20px;
+    }
+  
+    .navbar {
+      padding: 10px 20px;
+    }
+  
+    .logo {
+      font-size: 20px;
+    }
+  
+    .navLinks {
+      gap: 8px;
+    }
+  
+    .logoutbtn {
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+  }
+  
